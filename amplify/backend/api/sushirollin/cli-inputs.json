@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "sushirollin",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/whitehy/Coding/sushirollin/amplify/backend/api/sushirollin/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
