@@ -24,7 +24,7 @@ import { API } from "aws-amplify";
 import { createContactUs } from "../src/graphql/mutations";
 
 const ContactUsDialog = (props) => {
-//export default function ContactDialog(props) {
+  //export default function ContactDialog(props) {
   const themes = useTheme();
   const isSmall = useMediaQuery(themes.breakpoints.down("sm"));
 
@@ -108,6 +108,7 @@ const ContactUsDialog = (props) => {
       <Dialog
         open={openPopup}
         onClose={handleClose}
+        scroll="body"
         fullScreen={props.isMobile}
         PaperProps={{
           style: {
@@ -282,6 +283,6 @@ const ContactUsDialog = (props) => {
       />
     </Portal>
   );
-}
+};
 
 export default ContactUsDialog;
