@@ -67,3 +67,7 @@ body {
 .display-linebreak {
   white-space: pre-line;
 }
+
+.TextField-without-border-radius fieldset {
+  border-radius: 0;
+}

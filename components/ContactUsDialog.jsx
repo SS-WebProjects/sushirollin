@@ -144,37 +144,43 @@ const ContactUsDialog = (props) => {
                     Full Name
                   </Typography>
                 </FormLabel>
-                <TextField
-                  id="name"
-                  variant="outlined"
-                  color="secondary"
-                  focused
-                  size="small"
-                  style={{ backgroundColor: "#FFFFFF" }}
-                  value={formState.name}
-                  onChange={(e) =>
-                    setFormState({ ...formState, name: e.target.value })
-                  }
-                />
+                <div className="TextField-without-border-radius">
+                  <TextField
+                    fullWidth
+                    id="name"
+                    variant="outlined"
+                    color="secondary"
+                    focused
+                    size="small"
+                    style={{ backgroundColor: "#FFFFFF" }}
+                    value={formState.name}
+                    onChange={(e) =>
+                      setFormState({ ...formState, name: e.target.value })
+                    }
+                  />
+                </div>
               </FormControl>
-              <FormControl sx={{ pt: 1 }} fullWidth>
+              <FormControl fullWidth sx={{ pt: 1 }}>
                 <FormLabel>
                   <Typography variant={isSmall ? "h6" : "h6"} color="#F48A88">
                     Email
                   </Typography>
                 </FormLabel>
-                <TextField
-                  id="email"
-                  variant="outlined"
-                  color="secondary"
-                  focused
-                  size="small"
-                  style={{ backgroundColor: "#FFFFFF" }}
-                  value={formState.email}
-                  onChange={(e) =>
-                    setFormState({ ...formState, email: e.target.value })
-                  }
-                />
+                <div className="TextField-without-border-radius">
+                  <TextField
+                    fullWidth
+                    id="email"
+                    variant="outlined"
+                    color="secondary"
+                    focused
+                    size="small"
+                    style={{ backgroundColor: "#FFFFFF" }}
+                    value={formState.email}
+                    onChange={(e) =>
+                      setFormState({ ...formState, email: e.target.value })
+                    }
+                  />
+                </div>
               </FormControl>
               <FormControl sx={{ pt: 1 }} fullWidth>
                 <FormLabel>
@@ -182,18 +188,21 @@ const ContactUsDialog = (props) => {
                     Phone
                   </Typography>
                 </FormLabel>
-                <TextField
-                  id="phone"
-                  variant="outlined"
-                  color="secondary"
-                  focused
-                  size="small"
-                  style={{ backgroundColor: "#FFFFFF" }}
-                  value={formState.phone}
-                  onChange={(e) =>
-                    setFormState({ ...formState, phone: e.target.value })
-                  }
-                />
+                <div className="TextField-without-border-radius">
+                  <TextField
+                    fullWidth
+                    id="phone"
+                    variant="outlined"
+                    color="secondary"
+                    focused
+                    size="small"
+                    style={{ backgroundColor: "#FFFFFF" }}
+                    value={formState.phone}
+                    onChange={(e) =>
+                      setFormState({ ...formState, phone: e.target.value })
+                    }
+                  />
+                </div>
               </FormControl>
               <FormControl sx={{ pt: 1 }} fullWidth>
                 <FormLabel>
@@ -201,18 +210,21 @@ const ContactUsDialog = (props) => {
                     State
                   </Typography>
                 </FormLabel>
-                <TextField
-                  id="state"
-                  variant="outlined"
-                  color="secondary"
-                  focused
-                  size="small"
-                  style={{ backgroundColor: "#FFFFFF" }}
-                  value={formState.state}
-                  onChange={(e) =>
-                    setFormState({ ...formState, state: e.target.value })
-                  }
-                />
+                <div className="TextField-without-border-radius">
+                  <TextField
+                    fullWidth
+                    id="state"
+                    variant="outlined"
+                    color="secondary"
+                    focused
+                    size="small"
+                    style={{ backgroundColor: "#FFFFFF" }}
+                    value={formState.state}
+                    onChange={(e) =>
+                      setFormState({ ...formState, state: e.target.value })
+                    }
+                  />
+                </div>
               </FormControl>
               <FormControl sx={{ pt: 1 }} fullWidth>
                 <FormLabel>
@@ -220,20 +232,23 @@ const ContactUsDialog = (props) => {
                     Questions/Comments
                   </Typography>
                 </FormLabel>
-                <TextField
-                  id="comments"
-                  variant="outlined"
-                  color="secondary"
-                  focused
-                  size="small"
-                  style={{ backgroundColor: "#FFFFFF" }}
-                  value={formState.comments}
-                  onChange={(e) =>
-                    setFormState({ ...formState, comments: e.target.value })
-                  }
-                  multiline
-                  rows={6}
-                />
+                <div className="TextField-without-border-radius">
+                  <TextField
+                    fullWidth
+                    id="comments"
+                    variant="outlined"
+                    color="secondary"
+                    focused
+                    size="small"
+                    style={{ backgroundColor: "#FFFFFF" }}
+                    value={formState.comments}
+                    onChange={(e) =>
+                      setFormState({ ...formState, comments: e.target.value })
+                    }
+                    multiline
+                    rows={6}
+                  />
+                </div>
               </FormControl>
             </Grid>
           </DialogContent>
