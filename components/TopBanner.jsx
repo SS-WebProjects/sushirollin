@@ -7,7 +7,7 @@ const TopBanner = (props) => {
   if (props.title === "Home") {
     btn = (
       <Button variant="outlined" href="/franchise" sx={{ marginTop: "3%" }}>
-        Franchise
+        Franchise Opportunity
       </Button>
     );
   }
@@ -44,6 +44,15 @@ const TopBanner = (props) => {
         }}
       >
         <Typography
+          color={"secondary.main"}
+          variant={
+            props.isMobile ? (props.title == "Home" ? "h6" : "h2") : "h2"
+          }
+          align="right"
+        >
+          {props.second}
+          </Typography>
+          <Typography
           color={"primary.contrastText"}
           variant={
             props.isMobile ? (props.title == "Home" ? "h3" : "h2") : "h1"
@@ -51,8 +60,8 @@ const TopBanner = (props) => {
           align="right"
         >
           {props.description}
-          {<br />}
-          {props.second}
+          
+          
         </Typography>
         <Grid container justifyContent={props.isMobile ? "flex-end" : "center"}>
           {btn}

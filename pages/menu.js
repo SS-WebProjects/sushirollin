@@ -13,6 +13,7 @@ const MenuPage = (props) => {
         bgColor="common.beige"
         isMobile={props.isMobile}
         text="Find Us Here"
+        isMenuPage={true}
       />
     </>
   );
