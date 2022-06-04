@@ -14,23 +14,26 @@ export default function SectionMenu(props) {
         bgcolor: "common.beige",
       }}
     >
-      <Container sx={{ mt: props.isMobile ? 5 : 8 }}>
+      <Container sx={{ mt: props.isMobile ? 5 : 7 }}>
         <Typography
           color="text"
-          variant="h2"
+          variant={props.isMobile ? "h3" : "h2"}
           align="center"
-          sx={{ pb: props.isMobile ? 3 : 0 }}
+          sx={{ pb: props.isMobile ? 3 : 3 }}
         >
           What We are Rollin’
         </Typography>
 
-        <Typography color="text" variant="h3" align="center">
-          Asian cuisine has surpassed all other categories for the last 15
-          years. And it continues to grow. We have 60+ Rolls & Sushi and 30+
-          flavorful dishes on the menu.
+        <Typography color="text" 
+        variant={props.isMobile ? "h5" : "h3"} align="center"
+        sx={{ pb: props.isMobile ? 3 : 5,
+          px: props.isMobile ? 0 : 20 
+        }}
+        >
+        Asian cuisine has surpassed all other categories for the last 15 years and it continues to grow. We have 60+ rolls & sushi items and 30+ flavorful dishes on the menu.
         </Typography>
 
-        <Grid align="center" pb={7} pt={props.isMobile ? 3 : 0}>
+        <Grid align="center"  pb={props.isMobile ? 3 : 0}>
           <MuiNextLink href="/menu" underline="none" sx={{ py: 2 }}>
             <Button> View More Menu</Button>
           </MuiNextLink>
