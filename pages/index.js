@@ -10,8 +10,8 @@ const Homepage = (props) => {
     <>
       <TopBanner
         title="Home"
-        description="Re-thinking the"
-        second="Sushi Experience"
+        second="Low Start-up Cost, Big Numbers in Return"
+        description="Rollin’ in the Sushi"
         isMobile={props.isMobile}
       />
 
