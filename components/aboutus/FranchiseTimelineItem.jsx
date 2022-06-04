@@ -52,9 +52,6 @@ const FranchiseTimelineItem = (props) => {
         data-idx={idx}
         sx={{
           padding: "0",
-          maxWidth: {
-            xs: position === "left" ? "167px" : "186px", md: "initial"
-          },
           paddingTop: noPaddingTop ? "0" : idx === 3 ? "0" : "48px"
         }}
         >
