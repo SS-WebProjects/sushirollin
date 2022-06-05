@@ -8,13 +8,14 @@ import { Typography } from "@mui/material";
 
 const FranchiseTimelineItem = (props) => {
   const { idx,  date, text, position } = props.data;
+  const {isMobile} = props;
   const noPaddingTop = idx === 0 || idx === 1 || idx === 2;
 
   const dotDiv = (
     <div>
       <span className="dot"></span>
       <Typography
-        variant="body1"
+        variant={isMobile ? 'body2' : 'body1'}
         align={position == "left" ? "right" : "left"}
         sx={{
           paddingRight: position === "left" ? "60px" : "0",
