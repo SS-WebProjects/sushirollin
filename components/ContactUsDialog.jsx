@@ -56,8 +56,10 @@ const ContactUsDialog = (props) => {
 
   const handleContactFormSubmit = async (e) => {
     e.preventDefault();
+
     const { name, email, phone, state, comments } = formState;
-    if (name && email && phone && state && comments) {
+
+    if (name && email && phone && state) {
       try {
         await API.graphql({
           query: createContactUs,
@@ -72,19 +74,14 @@ const ContactUsDialog = (props) => {
           },
         });
         console.log("Congratulations");
+        
         setAlert({
           open: true,
           message: "Message sent successfully!",
           backgroundColor: "#4BB543",
         });
-        setFormState({
-          name: "",
-          email: "",
-          phone: "",
-          state: "",
-          comments: "",
-        });
-        //onClose();
+
+        setOpenPopup(false);
       } catch (e) {
         setAlert({
           open: true,
@@ -144,43 +141,42 @@ const ContactUsDialog = (props) => {
                     Full Name
                   </Typography>
                 </FormLabel>
-                <div className="TextField-without-border-radius">
-                  <TextField
-                    fullWidth
-                    id="name"
-                    variant="outlined"
-                    color="secondary"
-                    focused
-                    size="small"
-                    style={{ backgroundColor: "#FFFFFF" }}
-                    value={formState.name}
-                    onChange={(e) =>
-                      setFormState({ ...formState, name: e.target.value })
-                    }
-                  />
-                </div>
+                <TextField
+                  id="name"
+                  name="name"
+                  variant="outlined"
+                  color="secondary"
+                  focused
+                  size="small"
+                  style={{ backgroundColor: "#FFFFFF", borderRadius: "4px" }}
+                  value={formState.name}
+                  required
+                  onChange={(e) =>
+                    setFormState({ ...formState, name: e.target.value })
+                  }
+                />
               </FormControl>
-              <FormControl fullWidth sx={{ pt: 1 }}>
+              <FormControl sx={{ pt: 1 }} fullWidth>
                 <FormLabel>
                   <Typography variant={isSmall ? "h6" : "h6"} color="#F48A88">
                     Email
                   </Typography>
                 </FormLabel>
-                <div className="TextField-without-border-radius">
-                  <TextField
-                    fullWidth
-                    id="email"
-                    variant="outlined"
-                    color="secondary"
-                    focused
-                    size="small"
-                    style={{ backgroundColor: "#FFFFFF" }}
-                    value={formState.email}
-                    onChange={(e) =>
-                      setFormState({ ...formState, email: e.target.value })
-                    }
-                  />
-                </div>
+                <TextField
+                  id="email"
+                  name="email"
+                  type="email"
+                  variant="outlined"
+                  color="secondary"
+                  focused
+                  size="small"
+                  style={{ backgroundColor: "#FFFFFF", borderRadius: "4px" }}
+                  value={formState.email}
+                  required
+                  onChange={(e) =>
+                    setFormState({ ...formState, email: e.target.value })
+                  }
+                />
               </FormControl>
               <FormControl sx={{ pt: 1 }} fullWidth>
                 <FormLabel>
@@ -188,21 +184,23 @@ const ContactUsDialog = (props) => {
                     Phone
                   </Typography>
                 </FormLabel>
-                <div className="TextField-without-border-radius">
-                  <TextField
-                    fullWidth
-                    id="phone"
-                    variant="outlined"
-                    color="secondary"
-                    focused
-                    size="small"
-                    style={{ backgroundColor: "#FFFFFF" }}
-                    value={formState.phone}
-                    onChange={(e) =>
-                      setFormState({ ...formState, phone: e.target.value })
-                    }
-                  />
-                </div>
+                <TextField
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  variant="outlined"
+                  color="secondary"
+                  focused
+                  required
+                  placeholder="012-345-6789"
+                  inputProps={{pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}"}}
+                  size="small"
+                  style={{ backgroundColor: "#FFFFFF", borderRadius: "4px" }}
+                  value={formState.phone}
+                  onChange={(e) =>
+                    setFormState({ ...formState, phone: e.target.value })
+                  }
+                />
               </FormControl>
               <FormControl sx={{ pt: 1 }} fullWidth>
                 <FormLabel>
@@ -210,21 +208,22 @@ const ContactUsDialog = (props) => {
                     State
                   </Typography>
                 </FormLabel>
-                <div className="TextField-without-border-radius">
-                  <TextField
-                    fullWidth
-                    id="state"
-                    variant="outlined"
-                    color="secondary"
-                    focused
-                    size="small"
-                    style={{ backgroundColor: "#FFFFFF" }}
-                    value={formState.state}
-                    onChange={(e) =>
-                      setFormState({ ...formState, state: e.target.value })
-                    }
-                  />
-                </div>
+                <TextField
+                  id="state"
+                  name="state"
+                  variant="outlined"
+                  color="secondary"
+                  inputProps={{pattern: "[a-zA-Z]{2}"}}
+                  focused
+                  required
+                  placeholder="TX"
+                  size="small"
+                  style={{ backgroundColor: "#FFFFFF", borderRadius: "4px" }}
+                  value={formState.state}
+                  onChange={(e) =>
+                    setFormState({ ...formState, state: e.target.value })
+                  }
+                />
               </FormControl>
               <FormControl sx={{ pt: 1 }} fullWidth>
                 <FormLabel>
@@ -232,30 +231,27 @@ const ContactUsDialog = (props) => {
                     Questions/Comments
                   </Typography>
                 </FormLabel>
-                <div className="TextField-without-border-radius">
-                  <TextField
-                    fullWidth
-                    id="comments"
-                    variant="outlined"
-                    color="secondary"
-                    focused
-                    size="small"
-                    style={{ backgroundColor: "#FFFFFF" }}
-                    value={formState.comments}
-                    onChange={(e) =>
-                      setFormState({ ...formState, comments: e.target.value })
-                    }
-                    multiline
-                    rows={6}
-                  />
-                </div>
+                <TextField
+                  id="comments"
+                  name="comments"
+                  variant="outlined"
+                  color="secondary"
+                  focused
+                  size="small"
+                  style={{ backgroundColor: "#FFFFFF", borderRadius: "4px" }}
+                  value={formState.comments}
+                  onChange={(e) =>
+                    setFormState({ ...formState, comments: e.target.value })
+                  }
+                  multiline
+                  rows={6}
+                />
               </FormControl>
             </Grid>
           </DialogContent>
 
           <DialogActions sx={{ justifyContent: "center", pb: 2 }}>
             <Button
-              onClick={handleClose}
               type="submit"
               variant="outlined"
               sx={{
@@ -292,9 +288,9 @@ const ContactUsDialog = (props) => {
         open={alert.open}
         message={alert.message}
         ContentProps={{ style: { backgroundColor: alert.backgroundColor } }}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
         onClose={() => setAlert({ ...alert, open: false })}
-        autoHideDuration={4000}
+        autoHideDuration={8000}
       />
     </Portal>
   );
