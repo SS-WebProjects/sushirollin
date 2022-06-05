@@ -14,10 +14,6 @@ const AboutPage = ({isMobile}) => {
       direction="column"
       justifycontent="center"
       alignitems="center"
-      // xl={12}
-      // lg={12}
-      // xs={12}
-      // sm={12}
       sx={{ mb: isMobile ? 3: 0, mt: isMobile ? 2: 7}}
     >
       <Grid item
@@ -50,7 +46,7 @@ const AboutPage = ({isMobile}) => {
         </Typography>
         <Typography
           color="text"
-          variant= "h3"
+          variant= {isMobile ? 'h5' : 'h3'}
           align="center"
           fontWeight={"fontWeightBold"}
           fontFamily={"Nunito"}
@@ -62,7 +58,7 @@ const AboutPage = ({isMobile}) => {
           As a franshisee turned Chef CEO, June Kim has passion for creating a small business and owner-friendly ecosystem. Sushi Rollin’ will be the low startup cost and rewarding business partner that franchisees strive to be a part of.
         </Typography>
 
-        <FranchiseTimeline />
+        <FranchiseTimeline isMobile={isMobile} />
       </Grid>
         <Grid
           container
@@ -71,7 +67,9 @@ const AboutPage = ({isMobile}) => {
           alignitems="left"
           width={isMobile ? 346 : 596} 
         > 
-          <Typography variant='body1' fontStyle='italic' color="text.main" textAlign="center" pt = {isMobile ? 6 : 8 } 
+          <Typography 
+            variant={isMobile ? 'body2' : 'body1'} 
+            fontStyle='italic' color="text.main" textAlign="center" pt = {isMobile ? 6 : 8 } 
             paddingTop={isMobile ? 0 : "68px"}>
           “Most people consider sushi to be pricey and not an everyday kind of experience. At Sushi Rollin’, the experience is approachable yet still unique.”
           </Typography>
