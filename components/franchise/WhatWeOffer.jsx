@@ -24,14 +24,14 @@ const WhatWeOffer = (props) => {
                     color='text'
                     textAlign='center'
                 >
-                    From One-on-One sushi training to business advice,
+                    From one-on-one sushi training to business advice,
                 </Typography>
                 <Typography
                     variant={props.isMobile ? 'body2' : 'body1'}
                     color='text'
                     textAlign='center'
                 >
-                    Our hand-held approach will take you to success!
+                    our hand-held approach will guide you to success!
                 </Typography>
             </Grid>
             <Grid item container lg={12}

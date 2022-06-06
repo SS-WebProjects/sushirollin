@@ -1,18 +1,22 @@
 import { Button, Grid, Typography } from "@mui/material";
+import ContactUsButton from "./ContactUsButton";
 
 const ContactUsBanner = (props) => {
-    return (  
+    return (
         <Grid
             component='section'
             container
             justifyContent='center'
             alignItems='center'
-            sx={{
-                height: '50vh',
-                width: '100vw',
-                backgroundColor: 'common.white',
-                py: '2rem',
-              }}
+            padding={props.isMobile ? 4: 3}
+            gap={props.isMobile ? 3: 4}
+
+            sx={props.isMobile ? {
+                mt:4, mb: 5,
+              } : {
+                mt:6, mb: 6,
+              }
+            }
         >
             <Grid item xs={12}>
                 <Typography
@@ -23,14 +27,17 @@ const ContactUsBanner = (props) => {
                     Sounds Like A Good Opportunity?
                 </Typography>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} >
                 {props.isMobile ?
                     <Typography
                         color='text'
                         variant={props.isMobile ? 'body2' : 'body1'}
                         align='center'
                     >
-                        Contact us via Email or call us.<br />You can also visit one of our locations.<br /><br />Open to anyone who is passionate and<br />is ready to get this rollin’.<br /><br />Join us today!
+                        If you want to learn more about the numbers, the operation, and the process,
+                        send us an email or call us. You can also visit one of our locations.
+                        Open to anyone who is passionate and is ready to get this rollin’.
+                        <br />Join us today!
                     </Typography>
                     :
                     <Typography
@@ -38,19 +45,23 @@ const ContactUsBanner = (props) => {
                         variant={props.isMobile ? 'body2' : 'body1'}
                         align='center'
                     >
-                        Contact us via Email or call us. You can also visit one of our locations.<br />Open to anyone who is passionate and is ready to get this rollin’.<br />Join us today!
+                        If you want to learn more about the numbers, the operation, and the process,
+                        <br />send us an email or call us. You can also visit one of our locations.
+                        <br />Open to anyone who is passionate and is ready to get this rollin’.
+                        <br />Join us today!
                     </Typography> }
             </Grid>
       <Grid item xs={12} align='center'>
-        <Button 
+        <ContactUsButton isNavbar={false} />
+        {/* <Button
             rel='noopener noreferrer'
             href={`mailto:sushirollin.us@gmail.com`}
         >
             Contact Us
-        </Button>
+        </Button> */}
       </Grid>
     </Grid>
     );
 }
- 
+
 export default ContactUsBanner;

@@ -43,7 +43,7 @@ const Navbar = ({ navLinks }) => {
           </MuiNextLink>
         ))}
         <Box>
-          <ContactUsButton />
+          <ContactUsButton isNavbar={true} />
         </Box>
       </Stack>
     </Toolbar>

@@ -3,7 +3,7 @@ import {useState} from "react"
 import { Button } from "@mui/material";
 import ContactUsDialog from "./ContactUsDialog";
 
-const ContactUsButton = () => {
+const ContactUsButton = ({isNavbar}) => {
   const [openPopup, setOpenPopup] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ const ContactUsButton = () => {
           setOpenPopup(true);
         }}
         //href={`mailto:sushirollin.us@gmail.com`} 버튼사이즈 늘어남
-        sx={{
+        sx={ isNavbar ? {
           minWidth: "109px",
           maxHeight: "43px",
           paddingLeft: "18.5px",
@@ -26,7 +26,7 @@ const ContactUsButton = () => {
           typography: {
             fontSize: 14,
           },
-        }}
+        } : {}}
       >
         Contact Us
       </Button>

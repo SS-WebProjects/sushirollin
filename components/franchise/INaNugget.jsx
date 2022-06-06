@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import OrderTypeChart from "./OrderTypeChart";
 
-const INaNugget = (isMobile) => {
+const INaNugget = ({isMobile}) => {
     return (
         <Grid container bgcolor=""
             flexDirection="column"
@@ -11,27 +11,27 @@ const INaNugget = (isMobile) => {
             sx={{ mt: 8, mb: 8 }}
         >
             <Grid item xs={12} sx={{ mb: isMobile ? 5 : 6 }} bgcolor="">
-                <Typography 
+                <Typography
                     variant={ isMobile ? 'h3' : 'h2' }
                     color='text'
                 >
                     Sushi Rollin' in a Nugget
                 </Typography>
             </Grid>
-            
+
             <Grid container item sm={12} md={8} lg={8} gap={ isMobile ? 2 : 3 } justifyContent="center" alignItems='center' bgcolor="">
-                <Grid container item xs={isMobile ? 9 : 5 } sm={5}  justifyContent="center" alignItems='center' 
+                <Grid container item xs={isMobile ? 9 : 5 } sm={5}  justifyContent="center" alignItems='center'
                     sx={{ bgcolor: "common.beige" }}
                 >
-                    <Grid container item justifyContent="center" alignItems='center' 
-                        style={{ 
+                    <Grid container item justifyContent="center" alignItems='center'
+                        style={{
                             backgroundImage: `url('/franchise/bg_dollar_bigbox.svg')`,
                             width: 280,
                             height: 280
-                        }}                        
-                    > 
+                        }}
+                    >
                     <Grid item bgcolor="">
-                    <Typography 
+                    <Typography
                         variant='h3'
                         color='secondary.main'
                         align='center'
@@ -45,18 +45,18 @@ const INaNugget = (isMobile) => {
                     </Grid>
                     </Grid>
                 </Grid>
-                <Grid container item xs={isMobile ? 9 : 5 } sm={5} justifyContent="center" alignItems='center' 
+                <Grid container item xs={isMobile ? 9 : 5 } sm={5} justifyContent="center" alignItems='center'
                     sx={{ bgcolor: "common.beige" }}
                 >
-                    <Grid container item bgcolor=""  justifyContent="center" alignItems='center' 
-                        style={{ 
+                    <Grid container item bgcolor=""  justifyContent="center" alignItems='center'
+                        style={{
                             backgroundImage: `url('/franchise/bg_line_bigbox.svg')`,
                             width: 280,
                             height: 280
                         }}
-                    >  
+                    >
                     <Grid item>
-                    <Typography 
+                    <Typography
                         variant='h3'
                         color='secondary.main'
                         align='center'
@@ -74,8 +74,8 @@ const INaNugget = (isMobile) => {
                     </Grid>
                 </Grid>
                 <Grid container item xs={isMobile ? 9 : 5 } sm={5} width={280} height={280} sx={{ bgcolor: "common.beige" }} justifyContent="center" alignItems='center' >
-                    <Grid item bgcolor="">  
-                    <Typography 
+                    <Grid item bgcolor="">
+                    <Typography
                         variant='h3'
                         color='secondary.main'
                         align='center'
@@ -91,11 +91,11 @@ const INaNugget = (isMobile) => {
                     </Typography>
                     </Grid>
                 </Grid>
-                <Grid container item xs={isMobile ? 9 : 5 } sm={5} width={280} height={280} justifyContent="center" alignItems='center' 
+                <Grid container item xs={isMobile ? 9 : 5 } sm={5} width={280} height={280} justifyContent="center" alignItems='center'
                     sx={{ bgcolor: "common.beige" }}
                 >
-                    <Grid item bgcolor="" >  
-                    <Typography 
+                    <Grid item bgcolor="" >
+                    <Typography
                         variant='h3'
                         color='secondary.main'
                         align='center'
@@ -106,13 +106,13 @@ const INaNugget = (isMobile) => {
                     <OrderTypeChart />
                     </Grid>
                 </Grid>
-            </Grid> 
-            
+            </Grid>
+
 
         </Grid>
     )
 }
 
- 
+
 
 export default INaNugget;
