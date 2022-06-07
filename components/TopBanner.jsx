@@ -43,6 +43,7 @@ const TopBanner = (props) => {
           inset: 0,
         }}
       >
+        { props.isMobile && props.second == "Low Start-up Cost, Big Numbers in Return" ?
         <Typography
           color={"secondary.main"}
           variant={
@@ -50,18 +51,29 @@ const TopBanner = (props) => {
           }
           align="right"
         >
+          Low Start-up Cost, <br />Big Numbers in Return
+        </Typography>
+        :
+        <Typography
+        color={"secondary.main"}
+        variant={
+          props.isMobile ? (props.title == "Home" ? "h6" : "h2") : "h2"
+        }
+        align="right"
+        >
           {props.second}
-          </Typography>
-          <Typography
-          color={"primary.contrastText"}
-          variant={
-            props.isMobile ? (props.title == "Home" ? "h3" : "h2") : "h1"
+        </Typography>
+        }
+
+
+        <Typography
+        color={"primary.contrastText"}
+        variant={
+          props.isMobile ? (props.title == "Home" ? "h3" : "h2") : "h1"
           }
           align="right"
         >
           {props.description}
-          
-          
         </Typography>
         <Grid container justifyContent={props.isMobile ? "flex-end" : "center"}>
           {btn}

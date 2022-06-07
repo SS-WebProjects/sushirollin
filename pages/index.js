@@ -1,8 +1,11 @@
+import TopBanner from "@components/TopBanner";
 import SectionAbout from "@components/home/SectionAbout";
 import SectionMenu from "@components/home/SectionMenu";
 import SectionLocations from "@components/home/SectionLocations";
-import TopBanner from "@components/TopBanner";
-import CustomerReview from "@components/CustomerReview";
+import ReviewSection from "@components/franchise/ReviewSection";
+import ContactUsBannerMain from "@components/ContactUsBannerMain";
+// import CustomerReview from "@components/CustomerReview";
+
 const Homepage = (props) => {
   const isHome = true;
 
@@ -18,10 +21,12 @@ const Homepage = (props) => {
       <SectionAbout isMobile={props.isMobile} />
       <SectionMenu isMobile={props.isMobile} isHome />
       <SectionLocations isMobile={props.isMobile} />
-      <CustomerReview
+      <ReviewSection isMobile={props.isMobile} />
+      <ContactUsBannerMain isMobile={props.isMobile} />
+      {/* <CustomerReview
         isMobile={props.isMobile}
         reviewTitle="Here’s What the Customers Say"
-      />
+      /> */}
     </>
   );
 };
