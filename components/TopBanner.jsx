@@ -45,20 +45,17 @@ const TopBanner = (props) => {
       >
         { props.isMobile && props.second == "Low Start-up Cost, Big Numbers in Return" ?
         <Typography
-          color={"secondary.main"}
-          variant={
-            props.isMobile ? (props.title == "Home" ? "h6" : "h2") : "h2"
-          }
+          color="secondary.main"
+          variant={ props.title == "Home" ? "h6" : "h2" }
           align="right"
+          sx={{lineHeight: 1.0}}
         >
           Low Start-up Cost, <br />Big Numbers in Return
         </Typography>
         :
         <Typography
-        color={"secondary.main"}
-        variant={
-          props.isMobile ? (props.title == "Home" ? "h6" : "h2") : "h2"
-        }
+        color="secondary.main"
+        variant="h2"
         align="right"
         >
           {props.second}
