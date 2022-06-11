@@ -11,7 +11,6 @@ import ContactUsButton from "./ContactUsButton";
 
 import { useTheme, useMediaQuery } from "@mui/material";
 
-
 const SideDrawer = ({ navLinks }) => {
   const [state, setState] = useState({
     right: false,
@@ -337,7 +336,7 @@ const SideDrawer = ({ navLinks }) => {
 
   return (
     <>
-      <IconButton className="hamburger-btn"
+      <IconButton
         edge="start"
         aria-label="menu"
         onClick={toggleDrawer("right", true)}
