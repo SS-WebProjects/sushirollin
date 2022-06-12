@@ -21,7 +21,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { API } from "aws-amplify";
-import { createContactUs } from "../src/graphql/mutations";
+import { createContactUs } from "../../src/graphql/mutations";
 
 const ContactUsDialog = (props) => {
   //export default function ContactDialog(props) {
@@ -192,8 +192,7 @@ const ContactUsDialog = (props) => {
                   color="secondary"
                   focused
                   required
-                  placeholder="012-345-6789"
-                  inputProps={{pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}"}}
+                  inputProps={{pattern: "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"}}
                   size="small"
                   style={{ backgroundColor: "#FFFFFF", borderRadius: "4px" }}
                   value={formState.phone}
@@ -213,10 +212,9 @@ const ContactUsDialog = (props) => {
                   name="state"
                   variant="outlined"
                   color="secondary"
-                  inputProps={{pattern: "[a-zA-Z]{2}"}}
+                  inputProps={{pattern: "[a-zA-Z]{2,15}"}}
                   focused
                   required
-                  placeholder="TX"
                   size="small"
                   style={{ backgroundColor: "#FFFFFF", borderRadius: "4px" }}
                   value={formState.state}

@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import MuiNextLink from "./MuiNextLink";
-import ContactUsButton from "./ContactUsButton";
+import ContactUsButton from "../components/contactus/ContactUsButton";
 
 const Navbar = ({ navLinks }) => {
   return (

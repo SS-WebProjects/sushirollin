@@ -1,4 +1,4 @@
-import ContactUsBanner from "@components/ContactUsBanner";
+import ContactUsBanner from "@components/contactus/ContactUsBanner";
 import INaNugget from "@components/franchise/INaNugget";
 import FranchiseProcess from "@components/franchise/FranchiseProcess";
 import TopBanner from "@components/TopBanner";

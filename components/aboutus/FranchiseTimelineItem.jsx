@@ -10,6 +10,7 @@ const FranchiseTimelineItem = (props) => {
   const { idx,  date, text, position } = props.data;
   const {isMobile} = props;
   const noPaddingTop = idx === 0 || idx === 1 || idx === 2;
+  const line = isMobile ? "16px" : "60px";
 
   const dotDiv = (
     <div>
@@ -76,7 +77,7 @@ const FranchiseTimelineItem = (props) => {
             <Image src={"/icons/logo-circle.svg"} width={18} height={18} />
             <div
               style={{
-                width: "60px",
+                width: line,
                 height: "1px",
                 backgroundColor: "#333333",
               }}
@@ -92,7 +93,7 @@ const FranchiseTimelineItem = (props) => {
           >
             <div
               style={{
-                width: "60px",
+                width: line,
                 height: "1px",
                 backgroundColor: "#333333",
               }}

@@ -24,7 +24,7 @@ const SectionLocations = ({ isMobile }) => {
 
         <Grid container sx={{ mb: 1 }} spacing={2} align="center">
 
-        <Grid container item xs={12} sm={6} justifyContent="center" direction="col">
+        <Grid container item xs={12} sm={6} justifyContent="center" direction="column">
             <Grid item>
               <Image
                 src="/home_page/location-garland.jpg"
@@ -61,7 +61,7 @@ const SectionLocations = ({ isMobile }) => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container item xs={12} sm={6} justifyContent="center" direction="col">
+          <Grid container item xs={12} sm={6} justifyContent="center" direction="column">
             <Grid item>
               <Image
                 src="/home_page/location-lewisville.jpg"
