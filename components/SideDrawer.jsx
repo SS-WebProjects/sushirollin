@@ -7,7 +7,7 @@ import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import { Stack } from "@mui/material";
-import ContactUsButton from "./ContactUsButton";
+import ContactUsButton from "../components/contactus/ContactUsButton";
 
 import { useTheme, useMediaQuery } from "@mui/material";
 

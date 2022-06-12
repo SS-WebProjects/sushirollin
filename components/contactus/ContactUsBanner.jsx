@@ -1,5 +1,5 @@
 import { Button, Grid, Typography } from "@mui/material";
-import ContactUsButton from "./ContactUsButton";
+import ContactUsButton from "../components/contactus/ContactUsButton";
 
 const ContactUsBanner = (props) => {
     return (

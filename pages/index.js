@@ -3,7 +3,7 @@ import SectionAbout from "@components/home/SectionAbout";
 import SectionMenu from "@components/home/SectionMenu";
 import SectionLocations from "@components/home/SectionLocations";
 import ReviewSection from "@components/franchise/ReviewSection";
-import ContactUsBannerMain from "@components/ContactUsBannerMain";
+import ContactUsBannerMain from "@components/contactus/ContactUsBannerMain";
 // import CustomerReview from "@components/CustomerReview";
 
 const Homepage = (props) => {
