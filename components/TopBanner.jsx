@@ -57,8 +57,8 @@ const TopBanner = (props) => {
         <Typography
         color="secondary.main"
         variant="h2"
-        mt={8}
-        mb={1}
+        mt={ props.title=="Home" ? 8 : 0}
+        mb={ props.title=="Home" ? 1 : 0}
         align="right"
         >
           {props.second}
