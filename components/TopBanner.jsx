@@ -3,14 +3,14 @@ import MuiNextLink from "@components/MuiNextLink";
 import Image from "next/image";
 
 const TopBanner = (props) => {
-  let btn;
-  if (props.title === "Home") {
-    btn = (
-      <Button variant="outlined" href="/franchise" sx={{ marginTop: "3%" }}>
-        Franchise Opportunity
-      </Button>
-    );
-  }
+  // let btn;
+  // if (props.title === "Home") {
+  //   btn = (
+  //     <Button variant="outlined" href="/franchise" sx={{ marginTop: "3%" }}>
+  //       Franchise Opportunity
+  //     </Button>
+  //   );
+  // }
 
   return (
     <Grid
@@ -45,20 +45,20 @@ const TopBanner = (props) => {
       >
         { props.isMobile && props.second == "Low Start-up Cost, Big Numbers in Return" ?
         <Typography
-          color={"secondary.main"}
-          variant={
-            props.isMobile ? (props.title == "Home" ? "h6" : "h2") : "h2"
-          }
+          color="secondary.main"
+          variant="h4"
+          mt={3}
+          mb={2}
           align="right"
         >
           Low Start-up Cost, <br />Big Numbers in Return
         </Typography>
         :
         <Typography
-        color={"secondary.main"}
-        variant={
-          props.isMobile ? (props.title == "Home" ? "h6" : "h2") : "h2"
-        }
+        color="secondary.main"
+        variant="h2"
+        mt={8}
+        mb={1}
         align="right"
         >
           {props.second}
@@ -69,15 +69,15 @@ const TopBanner = (props) => {
         <Typography
         color={"primary.contrastText"}
         variant={
-          props.isMobile ? (props.title == "Home" ? "h3" : "h2") : "h1"
+          props.isMobile ? "h2" : "h1"
           }
           align="right"
         >
           {props.description}
         </Typography>
-        <Grid container justifyContent={props.isMobile ? "flex-end" : "center"}>
+        {/* <Grid container justifyContent={props.isMobile ? "flex-end" : "center"}>
           {btn}
-        </Grid>
+        </Grid> */}
       </Grid>
     </Grid>
   );
