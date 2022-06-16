@@ -3,7 +3,7 @@ import Timeline from "@mui/lab/Timeline";
 import FranchiseTimelineItem from "./FranchiseTimelineItem";
 import { timelineData } from "data/timeline";
 import Image from 'next/image';
-import Container from '@mui/material/Container';
+import { Container, Grid } from '@mui/material';
 
 const FranchiseTimeline = ({isMobile}) => {
   return (
@@ -14,13 +14,15 @@ const FranchiseTimeline = ({isMobile}) => {
             paddingTop: "48px"
           }}
           >
+          <Grid align="center" justifyContent="center">
           <Image
               src="/aboutpage/aboutimg.jpg"
               alt="Cooking"
               width="376px"
               height="268px"
           />
-        </Container>        
+          </Grid>
+        </Container>
       )}
       <Timeline
         sx={{
