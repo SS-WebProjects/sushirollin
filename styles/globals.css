@@ -71,3 +71,7 @@ body {
 .TextField-without-border-radius fieldset {
   border-radius: 0;
 }
+
+.hamburger-btn {
+  transform: scale(1.7);
+}

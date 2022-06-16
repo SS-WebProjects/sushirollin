@@ -7,7 +7,7 @@ const ReviewSection = ({ isMobile }) => {
     const isLarge = useMediaQuery(themes.breakpoints.down('lg'));
 
     const today = new Date();
-    const month = today.toDateString().slice(4,8);
+    const month = today.toDateString().slice(4,7);
     const year = today.getFullYear();
 
 
@@ -35,7 +35,7 @@ const ReviewSection = ({ isMobile }) => {
                         4.5
                     </Typography>
                     <Typography variant='body1' color='text' textAlign='center' mb={3}>
-                        As of {month} {year}
+                        As of {month}, {year}
                     </Typography>
                 </Grid>
                 <Grid container item   justifyContent="center" alignItems='center' bgcolor="common.beige" width={isLarge? 460 : 590}  height={335}>
