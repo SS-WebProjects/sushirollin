@@ -118,7 +118,7 @@ const SideDrawer = ({ navLinks }) => {
               margin: "48px 0px 48px 0px",
             }}
           >
-            <ContactUsButton />
+            <ContactUsButton isNavbar={true}/>
           </Box>
         </Box>
       </Stack>
@@ -336,7 +336,7 @@ const SideDrawer = ({ navLinks }) => {
 
   return (
     <>
-      <IconButton
+      <IconButton className="hamburger-btn"
         edge="start"
         aria-label="menu"
         onClick={toggleDrawer("right", true)}
