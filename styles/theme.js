@@ -42,7 +42,7 @@ let theme = createTheme({
       fontWeight: fontBold,
     },
     h6: {
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: fontBold,
     },
     subtitle1: {

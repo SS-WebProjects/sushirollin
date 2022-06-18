@@ -8,8 +8,8 @@ import FranchiseTimeline from './aboutus/FranchiseTimeline';
 const AboutPage = ({isMobile}) => {
 
   return (
-    <Container 
-  
+    <Container
+
       justify="center"
       direction="column"
       justifycontent="center"
@@ -21,7 +21,7 @@ const AboutPage = ({isMobile}) => {
         justify="center"
         flexDirection="column"
         justifycontent="center"
-        alignItems="center" 
+        alignItems="center"
         sx={{ mb: 1, mt: 1}}
       >
         <Grid
@@ -46,7 +46,7 @@ const AboutPage = ({isMobile}) => {
         </Typography>
         <Typography
           color="text"
-          variant= {isMobile ? 'h5' : 'h3'}
+          variant= {isMobile ? 'body2' : 'body1'}
           align="center"
           fontWeight={"fontWeightBold"}
           fontFamily={"Nunito"}
@@ -65,15 +65,15 @@ const AboutPage = ({isMobile}) => {
           direction="column"
           justifyContent="center"
           alignitems="left"
-          width={isMobile ? 346 : 596} 
-        > 
-          <Typography 
-            variant={isMobile ? 'body2' : 'body1'} 
-            fontStyle='italic' color="text.main" textAlign="center" pt = {isMobile ? 6 : 8 } 
+          width={isMobile ? 346 : 596}
+        >
+          <Typography
+            variant={isMobile ? 'body2' : 'body1'}
+            fontStyle='italic' color="text.main" textAlign="center" pt = {isMobile ? 6 : 8 }
             paddingTop={isMobile ? 0 : "68px"}>
           “Most people consider sushi to be pricey and not an everyday kind of experience. At Sushi Rollin’, the experience is approachable yet still unique.”
           </Typography>
-          <Typography variant='body1' color="333333" 
+          <Typography variant='body1' color="333333"
             textAlign="center"
             pt = {isMobile ? 0 : 2 }
             py = {isMobile ? 2 : 0 }
@@ -87,10 +87,10 @@ const AboutPage = ({isMobile}) => {
             <Button> Franchise Opportunity</Button>
           </MuiNextLink>
           <MuiNextLink href="/menu" underline="none" sx={{ mt: 4, mb: 5 }}>
-            <Button 
+            <Button
             style={{maxWidth: isMobile ? '230px' : '263px', minWidth: isMobile ? '230px' :'263px'}}
             variant="outlined" // black outline
-            sx={{ 
+            sx={{
               backgroundColor: "white",
               borderColor: "primary.main",
               color: "primary.main",

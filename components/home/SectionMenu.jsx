@@ -26,13 +26,13 @@ export default function SectionMenu(props) {
 
         <Grid align="center" >
         { props.isMobile ?
-          <Typography color="text" variant="h5" align="center" mb={3}>
+          <Typography color="text" variant="body2" align="center" mb={3}>
           Asian cuisine has surpassed all other categories for the last 15 years and it continues to grow. We have 60+ rolls & sushi items and 30+ flavorful dishes on the menu.
           </Typography>
         :
-          <Typography color="text" variant="h3" align="center" mb={5}>
-          Asian cuisine has surpassed all other categories for the last 15 years and it continues
-          <br />to grow. We have 60+ rolls & sushi items and 30+ flavorful dishes on the menu.
+          <Typography color="text" variant="body1" align="center" mb={5}>
+          Asian cuisine has surpassed all other categories for the last 15 years and it continues to grow.
+          <br />We have 60+ rolls & sushi items and 30+ flavorful dishes on the menu.
           </Typography>
         }
         </Grid>
