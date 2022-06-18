@@ -23,7 +23,7 @@ const OrderBanner = (props) => {
       <Grid item xs={12}>
         <div className="display-linebreak">
           <Typography
-            color="text"
+            color={props.text=="Find Us Here" ? "secondary.main" : "text"}
             variant={props.isMobile ? "h3" : "h2"}
             align="center"
           >

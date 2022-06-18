@@ -32,11 +32,11 @@ const SectionAbout = ({ isMobile }) => {
         >
           <Typography
             color="text"
-            variant={isMobile ? "h3" : "h2"}
+            variant={isMobile ? "h4" : "h3"}
             textAlign={isMobile ? "left" : "center"}
             sx={isMobile ? { my: 2 } : { my: 2, px: 2 }}
           >
-            Started in the middle of pandemic, but we kept rolling with 200% of average annual growth.
+            Started in the middle of pandemic, <br />but we kept rolling with 200% of <br />average annual growth.
           </Typography>
           <MuiNextLink href="/aboutus" underline="none" sx={{ py: 2 }}>
             <Button>About Sushi Rollin’</Button>
@@ -93,11 +93,11 @@ const SectionAbout = ({ isMobile }) => {
         >
           <Typography
             color="text"
-            variant={isMobile ? "h3" : "h2"}
+            variant={isMobile ? "h4" : "h3"}
             textAlign={isMobile ? "left" : "center"}
             sx={isMobile ? { my: 2 } : { my: 2, px: 2 }}
           >
-            Adaptable business model with low cost. Great choice for first-time franchisees.
+            Adaptable business model with low cost. <br />Great choice for first-time franchisees.
           </Typography>
           <MuiNextLink href="/franchise" underline="none" sx={{ py: 2 }}>
             <Button>Franchise Opportunity</Button>
