@@ -1,6 +1,7 @@
 import { CloseFullscreenOutlined } from "@mui/icons-material";
 import { Container, Grid, Typography, Rating } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
+import Link from "@mui/material/Link";
 
 const ReviewSection = ({ isMobile }) => {
     const themes = useTheme();
@@ -28,11 +29,35 @@ const ReviewSection = ({ isMobile }) => {
                         mt={5}
                         mb={2}
                     >
+                        <Link
+                            href="https://www.google.com/search?q=sushi+rollin&rlz=1C1CHZL_koUS720US720&oq=sushi+rollin&aqs=chrome.0.35i39j46i20i175i199i263i512j69i59j0i433i512j0i512j69i60j69i61l2.1579j0j4&sourceid=chrome&ie=UTF-8#lrd=0x864c1c1d7fd6e1b5:0x62b324ffee5c8f26,1"
+                            target="_blank"
+                            color="text.main"
+                            underline="none"
+                            sx={{
+                                "&:hover": {
+                                  color: "secondary.main",
+                                },
+                            }}
+                        >
                         Average Google <br />Customer Review
+                        </Link>
                     </Typography>
                     <Rating name='review_rating' value={4.5}  precision={0.5} size='small' sx={{ color: 'black',  display: 'flex', justifyContent: 'center'  }} readOnly />
                     <Typography fontSize={100} fontWeight='bold' color='text' lineHeight={1.2} textAlign='center' mt={1}>
+                        <Link
+                            href="https://www.google.com/search?q=sushi+rollin&rlz=1C1CHZL_koUS720US720&oq=sushi+rollin&aqs=chrome.0.35i39j46i20i175i199i263i512j69i59j0i433i512j0i512j69i60j69i61l2.1579j0j4&sourceid=chrome&ie=UTF-8#lrd=0x864c1c1d7fd6e1b5:0x62b324ffee5c8f26,1"
+                            target="_blank"
+                            color="text.main"
+                            underline="none"
+                            sx={{
+                                "&:hover": {
+                                  color: "secondary.main",
+                                },
+                            }}
+                        >
                         4.5
+                        </Link>
                     </Typography>
                     <Typography variant='body1' color='text' textAlign='center' mb={3}>
                         As of {month}, {year}
