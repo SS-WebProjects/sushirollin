@@ -13,7 +13,7 @@ const ContactUsButton = ({isNavbar}) => {
         onClick={() => {
           setOpenPopup(true);
         }}
-        //href={`mailto:sushirollin.us@gmail.com`} 버튼사이즈 늘어남
+        href={`mailto:sushirollin.us@gmail.com`} //버튼사이즈 늘어남
         sx={ isNavbar ? {
           minWidth: "109px",
           maxHeight: "43px",
@@ -31,7 +31,7 @@ const ContactUsButton = ({isNavbar}) => {
         Contact Us
       </Button>
 
-      <ContactUsDialog openPopup={openPopup} setOpenPopup={setOpenPopup} />
+      {/* <ContactUsDialog openPopup={openPopup} setOpenPopup={setOpenPopup} /> */}
     </>
   );
 };
