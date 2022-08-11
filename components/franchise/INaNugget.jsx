@@ -62,7 +62,7 @@ const INaNugget = ({isMobile}) => {
                         align='center'
                         mb={3}
                     >
-                        Avg. Slaes Growth
+                        Avg. Sales Growth
                     </Typography>
                     <Typography variant='h1' color='text' align='center'>
                         x2.05
